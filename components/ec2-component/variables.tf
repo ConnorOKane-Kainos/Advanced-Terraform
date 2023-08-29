@@ -28,7 +28,6 @@ variable "environment" {
 
 variable "web_instance_count" {
   type    = number
-  default = 1
 }
 
 variable "web_instance_type" {
