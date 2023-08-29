@@ -13,7 +13,7 @@ This resource is typically used in AWS environments to allocate a public IP addr
 */
 
 resource "aws_eip" "nat" {
-  count = var.nat_gateway_count
+  count = var.module_nat_gateway_count
 
   domain = "vpc"
 

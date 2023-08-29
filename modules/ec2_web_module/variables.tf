@@ -34,6 +34,6 @@ variable "user_data_file" {
   type = string 
 }
 
-variable "aws_subnet" {
+variable "subnet_id" {
   type = list(string)
 }

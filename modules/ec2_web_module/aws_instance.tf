@@ -1,9 +1,9 @@
 resource "aws_instance" "web" {
-  count         = var.instance_count
+count         = var.instance_count
 
   ami           = var.instance_ami_id
   instance_type = var.instance_type
-  subnet_id     = var.aws_subnet[count.index % length(var.aws_subnet)]
+  subnet_id     = var.subnet_id[count.index % length(var.subnet_id)]
 
   user_data = var.user_data_file
 
@@ -16,3 +16,5 @@ resource "aws_instance" "web" {
   }
 
 }
+
+//this is test
