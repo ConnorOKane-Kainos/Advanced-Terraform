@@ -1,4 +1,4 @@
-variable "aws_region" {
+module_variable "aws_region" {
   type = string
 }
 
