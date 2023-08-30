@@ -28,11 +28,29 @@ variable "environment" {
 
 variable "web_instance_count" {
   type    = number
+  default = 1
 }
 
 variable "web_instance_type" {
   type    = string
   default = "t2.micro"
 }
+
+variable "mgmt_instance_type" {
+  type    = string
+  default = "t2.micro"
+}
+
+variable "mgmt_instance_count" {
+  type    = string
+  default = 1
+}
+
+variable "trusted_subnets" {
+  type        = list(string)
+  description = "List of trusted Kainos IP addresses"
+}
+
+
 
 

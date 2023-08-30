@@ -37,3 +37,9 @@ variable "nat_gateway_count" {
   type        = number
   description = "Number of NAT Gateways"
 }
+
+variable "module_nat_gateway_count" {
+  description = "Number of NAT gateways to create."
+  type        = number
+  default     = 1  # or any other default value you'd like to set
+}

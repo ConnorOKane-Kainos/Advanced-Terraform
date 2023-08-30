@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-count         = var.instance_count
+  count = var.instance_count
 
   ami           = var.instance_ami_id
   instance_type = var.instance_type
@@ -9,6 +9,7 @@ count         = var.instance_count
 
   tags = {
     Name = "${local.naming_prefix}-webserver-${count.index}"
+    Role = "${var.instance_role}"
   }
 
   lifecycle {
